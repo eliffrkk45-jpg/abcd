@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sinir Sistemi – 3B Modeller</title>
+<link rel="stylesheet" href="3d-modeller.css">
+<style>body{margin:0;background:#f4f8ff}</style>
+</head>
+<body>
+
+<!-- ===== SİTENİZE EKLEMEK İÇİN: bu <section> bloğunu, 3d-modeller.css ve 3d-modeller.js dosyalarını kullanın ===== -->
+<section class="m3d" id="model3d">
+  <h2>Sinir Sistemi 3B Modeller</h2>
+  <p class="lead">Modelleri fareyle (ya da parmağınla) döndür, tekerlekle yakınlaştır, parçalara tıklayarak bilgi al. Düğmelerle animasyonları başlat.</p>
+
+  <div class="tabs" role="tablist" id="tabs">
+    <button class="tab on" role="tab" data-m="neuron">Nöron</button>
+    <button class="tab" role="tab" data-m="reflex">Refleks yayı</button>
+    <button class="tab" role="tab" data-m="synapse">Sinaps</button>
+    <button class="tab" role="tab" data-m="ap">Aksiyon potansiyeli</button>
+  </div>
+
+  <div class="wrap">
+    <div class="stage" id="stage">
+      <canvas id="gl"></canvas>
+      <canvas id="apCanvas"></canvas>
+      <div class="hint">Sürükle: döndür · Tekerlek: yakınlaştır · Tıkla: bilgi al</div>
+    </div>
+    <aside class="panel" aria-live="polite">
+      <h3 id="infoTitle"></h3>
+      <p id="infoText"></p>
+      <div class="step" id="stepText"></div>
+      <div class="stat" id="stat"></div>
+      <div class="ctrl" id="ctrl"></div>
+    </aside>
+  </div>
+</section>
+<!-- ===== bölüm sonu ===== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="3d-modeller.js"></script>
+</body>
+</html>
